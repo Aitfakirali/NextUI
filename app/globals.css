@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+ 
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+ 
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.mdx {
+  @apply text-lg leading-relaxed;
+}
+
+.mdx p {
+  @apply mt-6;
+}
+
+.mdx h1 {
+  @apply mt-2 scroll-m-20 text-4xl font-bold tracking-tight;
+}
+
+.mdx h2 {
+  @apply mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0;
+}
+
+.mdx h3 {
+  @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
+}
+
+.mdx h4 {
+  @apply mt-8 scroll-m-20 text-xl font-semibold tracking-tight;
+}
+
+.mdx h5 {
+  @apply mt-8 scroll-m-20 text-lg font-semibold tracking-tight;
+}
+
+.mdx h6 {
+  @apply mt-8 scroll-m-20 text-base font-semibold tracking-tight;
+}
+
+.mdx blockquote {
+  @apply mt-6 border-l-2 pl-6 italic;
+}
+
+.mdx ul {
+  @apply my-6 ml-6 list-disc;
+}
+
+.mdx ol {
+  @apply my-6 ml-6 list-decimal;
+}
+
+.mdx li {
+  @apply mt-2;
+}
+
+.mdx a {
+  @apply font-medium underline underline-offset-4;
+}
+
+.mdx hr {
+  @apply my-4 md:my-8;
+}
+
+.mdx table {
+  @apply my-6 w-full overflow-y-auto;
+}
+
+.mdx tr {
+  @apply m-0 border-t p-0 even:bg-muted;
+}
+
+.mdx th {
+  @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+}
+
+.mdx td {
+  @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+}
+
+.mdx pre {
+  @apply mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4;
+}
+
+.mdx code {
+  @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm;
+}
+
+.mdx pre code {
+  @apply bg-transparent p-0;
+}
+
+.mdx img {
+  @apply rounded-md border;
+}
+
+.mdx video {
+  @apply rounded-md border;
+}
+
+.mdx .alert {
+  @apply my-6 flex items-start rounded-lg border p-4;
+}
+
+.mdx .alert-info {
+  @apply border-blue-200 bg-blue-100 text-blue-800 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-200;
+}
+
+.mdx .alert-warning {
+  @apply border-yellow-200 bg-yellow-100 text-yellow-800 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-200;
+}
+
+.mdx .alert-danger {
+  @apply border-red-200 bg-red-100 text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-200;
+}
+
+.mdx .callout {
+  @apply mt-6 flex items-start rounded-md border border-l-4 p-4;
+}
+
+.mdx .callout p {
+  @apply mt-0;
+}
+
+.mdx .callout-info {
+  @apply border-l-blue-500 bg-blue-50 dark:bg-blue-950;
+}
+
+.mdx .callout-warning {
+  @apply border-l-yellow-500 bg-yellow-50 dark:bg-yellow-950;
+}
+
+.mdx .callout-danger {
+  @apply border-l-red-500 bg-red-50 dark:bg-red-950;
+}
+
+.mdx .steps {
+  @apply ml-4 border-l pl-8 [counter-reset:step];
+}
+
+.mdx .steps h3 {
+  @apply mt-4 text-base font-medium;
+}
+
+.mdx .steps h3::before {
+  @apply absolute -ml-[50px] mt-[3px] h-[33px] w-[33px] rounded-full border border-border bg-background text-center text-sm font-medium text-muted-foreground content-[counter(step)] [counter-increment:step];
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-muted-foreground/30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/40;
+}
